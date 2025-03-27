@@ -1,0 +1,1 @@
+export { CompleteProfileCustomer } from "./complete_profile.use-case";

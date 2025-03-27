@@ -1,0 +1,1 @@
+export { CompleteProfileDto } from "./profile.dto";

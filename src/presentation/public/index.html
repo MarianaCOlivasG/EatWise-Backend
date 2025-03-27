@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCTRAM EATS API</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+
+</head>
+<body>
+    <h1>Acceso denegado</h1>
+
+    <script>
+        // Token de prueba, generado por el auth/login
+        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI5Zjk5YmRhYi1hMzg2LTQ0ODUtOTVjNi00YWYxMWRlYWQyMWQiLCJpYXQiOjE3Mzc1NTI0NzMsImV4cCI6MTczNzU1OTY3M30.JJfn1fciLXQXKclwMBTg89AVNgboJUO6d9T8n3f7Z6k';
+
+        // Conexión a sockets server
+        const socket = io('http://localhost:3500', {
+            query: {
+                Authorization: token,
+                Order: 1234
+            }
+        });
+
+        socket.emit('join_chat', (data)=>{
+
+            console.log(data);
+            
+
+        })
+
+        socket.on('respuesta', (data) => {
+            console.log('Respuesta del servidor:', data);
+        });
+
+        
+    </script>
+  
+</body>
+</html>

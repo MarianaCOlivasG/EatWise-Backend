@@ -1,0 +1,21 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .text-center {
+            text-align: center;
+        }
+        .code {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p class="text-center">¡Hola, {{ name }}! Bienvenido a raloshop by &copy;ralo company</p>
+    <p class="text-center">Este es tu código para verificar tu cuenta</p>
+    <p class="code text-center">{{ verification_code }}</p>
+
+    <span class="text-center">Da click <a href="{{ url_site }}/auth/verification?account={{ uid }}">aquí</a> para verificar tu cuenta.</span>
+</body>

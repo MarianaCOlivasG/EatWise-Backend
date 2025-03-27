@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  octram-eats-mysql:
+    image: mysql:8.0
+    restart: always
+    container_name: octram-eats-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Olivas031523
+      MYSQL_DATABASE: shopDB
+    volumes:
+      - octram-eats-mysql-data:/var/lib/mysql
+    networks:
+      - octram-eats-network
+
+  octram-eats-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: octram-eats-server
+    ports:
+      - "3500:3500"
+    networks:
+      - octram-eats-network
+    depends_on:
+      - octram-eats-mysql
+
+networks:
+  octram-eats-network:  
+volumes:
+  octram-eats-mysql-data:
