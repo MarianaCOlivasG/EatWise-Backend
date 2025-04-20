@@ -19,7 +19,7 @@ export const run = async ( name: string, history: ChatCompletionMessageParam[]  
             ...history
         ],
         temperature: 1,
-        max_tokens: 250,
+        max_tokens: 800,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0

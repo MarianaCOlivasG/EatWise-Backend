@@ -25,9 +25,15 @@ export class AppRoutes {
 
             const openaiResponse = await run( name, history );
 
+
+            // history.push({
+            //     role: 'assistant',
+            //     content: openaiResponse
+            // })
+
             history.push({
                 role: 'assistant',
-                content: openaiResponse
+                content: JSON.parse(openaiResponse)
             })
 
             return res.json({
