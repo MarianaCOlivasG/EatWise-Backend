@@ -9,7 +9,7 @@ export class JwtAdapter {
 
         return new Promise( (resolve) => {
 
-            jwt.sign( payload, envs.JWT_SEED, { expiresIn: duration }, ( err, accessToken ) => {
+            jwt.sign( payload, envs.JWT_SEED, { expiresIn: "2h" }, ( err, accessToken ) => {
 
                 if ( err ) {
                     return resolve(null);

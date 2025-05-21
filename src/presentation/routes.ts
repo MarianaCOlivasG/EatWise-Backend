@@ -13,7 +13,7 @@ export class AppRoutes {
 
         router.use('/api/auth', AuthRoutes.routes );
         router.use('/api/customer', CustomerRoutes.routes);
-        router.post('/api/ia', async (req, res ) => {
+        router.post('/api/ia/recipes', async (req, res ) => {
             
             const { content, name } = req.body;
             const history: ChatCompletionMessageParam[] = [];
