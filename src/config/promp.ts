@@ -12,7 +12,7 @@ image: string -> url de una imagen sobre la receta
 Porfavor: 
 Dame un arreglo de almenos 5 recetas
 Verifica que la respuesta sea un JSON.parse correcto para JS
-Verifica que la respuesta no exeda los max_tokens 800
+Verifica que la respuesta no exceda los max_tokens 800
 
 `
 
